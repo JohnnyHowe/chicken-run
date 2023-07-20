@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3503422657265929577}
   - component: {fileID: 810214663541350268}
   - component: {fileID: 8398119516996317335}
+  - component: {fileID: 6857932080778297846}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -99,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fallSpeed: 10
-  _speed: 24
+  _speed: 16
   _initialVerticalVelocity: 0
   _intialHeight: 4
 --- !u!50 &8398119516996317335
@@ -123,3 +124,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6857932080778297846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8018957987421007327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8401734ddaa309f4d86d0b9a3d8b1a03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: {x: 0, y: 0, z: 360}
