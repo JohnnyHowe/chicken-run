@@ -7,8 +7,9 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private AProjectile _projectilePrefab;
     [SerializeField] private Vector2 _projectileLaunchPositionOffset = Vector2.zero;
 
-    void Update()
+    private void Update()
     {
+        // TODO controller support
         if (Input.GetMouseButtonDown(0))
         {
             Attack();
@@ -18,7 +19,13 @@ public class PlayerAttack : MonoBehaviour
     private void Attack()
     {
         AProjectile projectile = Instantiate(_projectilePrefab);
-        projectile.Set(Vector2.right);
+        projectile.Set(GetAimDirection());
         projectile.transform.position = transform.position + (Vector3)_projectileLaunchPositionOffset;
+    }
+
+    public Vector2 GetAimDirection()
+    {
+        // TODO controller support
+        return (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position + (Vector3)_projectileLaunchPositionOffset).normalized;
     }
 }

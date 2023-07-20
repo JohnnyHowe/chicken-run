@@ -99,9 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fallSpeed: 10
-  _speed: 16
-  _initialVerticalVelocity: 5
-  _intialHeight: 0.4
+  _speed: 24
+  _initialVerticalVelocity: 0
+  _intialHeight: 4
 --- !u!50 &8398119516996317335
 Rigidbody2D:
   serializedVersion: 4

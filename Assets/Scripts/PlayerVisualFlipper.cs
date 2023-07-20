@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(TransformFlipBookFlipper))]
-public class FaceHorizontalDirection : MonoBehaviour
+public class PlayerVisualFlipper : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D _objectToFaceDirectionOf;
+    [SerializeField] private PlayerAttack _player;
     private TransformFlipBookFlipper _flipper;
 
-    private void Awake() 
+    private void Awake()
     {
         _flipper = GetComponent<TransformFlipBookFlipper>();
     }
 
     private void Update()
     {
-        _flipper.SetTargetDirection(Mathf.Sign(_objectToFaceDirectionOf.velocity.x));
+        _flipper.SetTargetDirection(_player.GetAimDirection().x); 
     }
 }
