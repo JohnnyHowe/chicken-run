@@ -260,7 +260,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 5
   _maxHealth: 2
+  DeathTime: 0.5
+  CurrentState: 0
   OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeath:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &4732682507930313213
@@ -279,3 +284,4 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 59199386086138062}
   _hitColor: {r: 1, g: 0, b: 0, a: 1}
   _hitColorFadeTime: 0.25
+  _deathParticles: {fileID: 3619432445779102666, guid: ebb52da9182f9b840a0fffe7b6cbd0cc, type: 3}
