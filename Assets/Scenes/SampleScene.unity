@@ -7274,7 +7274,7 @@ GameObject:
   - component: {fileID: 251619369}
   - component: {fileID: 251619371}
   - component: {fileID: 251619370}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ChickenView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7930,7 +7930,7 @@ GameObject:
   - component: {fileID: 283050646}
   - component: {fileID: 283050644}
   - component: {fileID: 283050643}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -18917,7 +18917,7 @@ GameObject:
   - component: {fileID: 651353328}
   - component: {fileID: 651353327}
   - component: {fileID: 651353329}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerFlip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37037,7 +37037,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 80
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -40375,7 +40375,7 @@ GameObject:
   - component: {fileID: 1414835092}
   - component: {fileID: 1414835094}
   - component: {fileID: 1414835095}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51420,7 +51420,7 @@ GameObject:
   - component: {fileID: 1760183221}
   - component: {fileID: 1760183223}
   - component: {fileID: 1760183224}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ChickenFlip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53915,7 +53915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1866042123}
   - component: {fileID: 1866042124}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ChickenView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
