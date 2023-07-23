@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Zombe : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Zombe : MonoBehaviour
     private Rigidbody2D _rigidBody;
     private Transform _player;
     private float _health;
+
+    public UnityEvent OnHit;
 
     private void Awake()
     {
@@ -23,13 +26,16 @@ public class Zombe : MonoBehaviour
 
     private void Update()
     {
-        Vector2 targetDirection = (_GetTargetPlayer().position - transform.position).normalized;
-        _rigidBody.velocity = targetDirection * _speed;
-
+        _Move();
         if (_health <= 0)
         {
             _Die();
         }
+    }
+
+    private void _Move()
+    {
+        _rigidBody.velocity += GetTargetDirection() * _speed * Time.deltaTime;
     }
 
     private void _Die()
@@ -48,6 +54,12 @@ public class Zombe : MonoBehaviour
         {
             _health -= projectile.GetContactDamage();
             projectile.OnHit();
+            OnHit.Invoke();
         }
+    }
+
+    public Vector2 GetTargetDirection()
+    {
+        return (_GetTargetPlayer().position - transform.position).normalized;
     }
 }

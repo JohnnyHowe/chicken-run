@@ -127,7 +127,6 @@ GameObject:
   m_Component:
   - component: {fileID: 59199386890228532}
   - component: {fileID: 59199386890228490}
-  - component: {fileID: 59199386890228491}
   m_Layer: 0
   m_Name: ViewFlipContainer
   m_TagString: Untagged
@@ -164,19 +163,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _visualFlipTime: 0.1
---- !u!114 &59199386890228491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59199386890228533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9716ccd81101f7a459995b461082e5dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objectToFaceDirectionOf: {fileID: 59199387463766865}
 --- !u!1 &59199387463766867
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,6 +175,7 @@ GameObject:
   - component: {fileID: 59199387463766864}
   - component: {fileID: 59199387463766865}
   - component: {fileID: 59199387463766866}
+  - component: {fileID: 4732682507930313213}
   m_Layer: 0
   m_Name: Zombe
   m_TagString: Untagged
@@ -236,7 +223,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.688904}
+  m_Size: {x: 1.7067807, y: 2.2981386}
   m_EdgeRadius: 0
 --- !u!50 &59199387463766865
 Rigidbody2D:
@@ -251,7 +238,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 80
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -273,3 +260,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 5
   _maxHealth: 2
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4732682507930313213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59199387463766867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a29d9d795d105ad44b992272b6fd3e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _flipper: {fileID: 59199386890228490}
+  _spriteRenderer: {fileID: 59199386086138062}
+  _hitColor: {r: 1, g: 0, b: 0, a: 1}
+  _hitColorFadeTime: 0.25

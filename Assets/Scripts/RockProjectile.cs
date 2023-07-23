@@ -52,5 +52,6 @@ public class RockProjectile : AProjectile
     public override void OnHit()
     {
         _hasDoneDamage = true;
+        Destroy(gameObject);
     }
 }
